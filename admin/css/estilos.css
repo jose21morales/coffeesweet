@@ -1,0 +1,1414 @@
+@font-face {
+	font-family: 'Pacifico';
+	src:url(../fonts/Pacifico-Regular.ttf);
+}
+
+@font-face {
+	font-family: 'Montserrat';
+	src:url(../fonts/Montserrat-Regular.ttf);
+}
+
+@font-face {
+	font-family: 'Montserrat';
+	font-weight: bold;
+	src:url(../fonts/Montserrat-Bold.ttf);
+}
+
+/*-------------Estilos base--------------*/
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: 'Montserrat';
+}
+
+img {
+	display: block;
+	width: 100%;
+	max-width: 100%;
+}
+
+.container {
+	width: 100%;
+	margin: auto;
+}
+
+html {
+	scroll-behavior:smooth;
+}
+
+.line-hr {
+	border:1px solid #ccc;
+	margin-bottom: 20px;
+}
+
+/*----------Estilos del sidebar-----------*/
+
+.sidebar {
+	width: 240px;
+	height: 100%;
+	position: fixed;
+	background: #333;
+	color: #fff;
+	outline: 1px solid #2a2a2a;
+}
+
+.sidebar-title {
+	padding: 10px;
+	text-align: center;
+	background: #2a2a2a;
+	font-size: 20px;
+	margin: 0;
+}
+
+.sidebar ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.sidebar li {
+	outline: 1px solid #2a2a2a;
+	transition: all 0.3s;
+}
+
+.sidebar li:hover {
+	background: #444;
+	border-left: 5px solid #eee;
+}
+
+.sidebar a {
+	display: block;
+	padding: 10px;
+	color: #fff;
+	text-decoration: none;
+}
+
+.global-container {
+	position: relative;
+	transition: all 0.3s;
+	width: 100%;
+	height: 100%;
+	background: #fff;
+}
+
+.menu-bar {
+	cursor: pointer;
+	width: 25px;
+	padding-top: 10px;
+}
+
+.open {
+	transform: translateX(250px);
+}
+
+/*----------Estilos del cPanel-----------*/
+
+.c_panel {
+	display: flex;
+	justify-content: space-between;
+	margin: 10px 0 10px 0;
+	width: 100%;
+}
+.c_panel-title {
+	font-size: 16px;
+	color: brown;
+}
+
+
+.c_panel-close {
+	text-decoration: none;
+	border:1px solid #000;
+	border-radius: 5px;
+	padding: 5px;
+	height: 40px;
+	background: rgb(146,88,62);
+	color: white;
+}
+
+.c_panel-close:hover {
+	background: rgb(149,99,69);
+}
+
+/*----------Estilos del header-----------*/
+
+.header-logo {
+	font-family: 'Pacifico', cursive;
+	font-weight: 100;
+	background: brown;
+	color: #fff;
+	text-align: center;
+	padding: 10px;
+}
+
+.header-content {
+	padding: 8px 0 8px 0;
+}
+
+.icon-location {
+	color: red;
+}
+
+/*-------------Estilos del menu-------------*/
+
+.logo {
+	display: none;
+}
+
+.icon-bars {
+	display: block;
+	color: #fff;
+	border: 1px solid #fff;
+	border-radius: 3px;
+	width: 40px;
+	height: 40px;
+	line-height: 45px;
+	text-align: center;
+	cursor: pointer;
+	font-size: 1.5em;
+	float: right;
+	margin: 3px 3px 0 0;
+}
+
+.menu {
+	position: absolute;
+	width: 80%;
+	text-align: center;
+	left: -200%;
+	transition: all 0.4s;
+}
+
+.mostrar {
+	left: 0;
+}
+
+.menu__item {
+	list-style: none;
+}
+
+.menu__link {
+	display: block;
+	text-decoration: none;
+	background: brown;
+	color: #fff;
+	padding:10px;
+}
+
+.icon-home, .icon-cloud-download,
+.icon-phone, .icon-user {
+	position: relative;
+	font-size: 18px;
+	top: 2px;
+	right: 5px;
+}
+
+.menu__link:hover {
+	background: #fff;
+	color: brown;
+}
+
+/*-------------Estilos del banner-------------*/
+
+.banner {
+	background-image: url(../img/banner1.jpg);
+	background-size: 100% 100%;
+	background-attachment: fixed;
+	margin-bottom: 20px;
+}
+
+.banner__color {
+	background:rgba(0,0,0,.2);
+	padding: 120px 0 120px 0;
+}
+
+.banner__content {
+	color: #fff;
+	padding: 10px;
+}
+
+.banner__title {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.banner__txt {
+	font-size: 14px;
+	font-weight: normal;
+	margin-bottom: 25px;
+}
+
+.banner-edit {
+	border:1px solid #fff;
+	padding: 10px;
+	font-size: 14px;
+	background: none;
+	color: #fff;
+	text-decoration: none;
+}
+
+.banner-edit:hover {
+	cursor: pointer;
+}
+
+.banner__buttons {
+	text-align: center;
+	text-decoration: none;
+	color: #fff;
+	margin: 20px 0 20px 0;
+}
+
+.banner__buttons-link {
+	text-decoration: none;
+	color: #fff;
+	border:1px solid #fff;
+    border-radius: 5px;
+    padding: 8px;
+    font-size: 14px;
+}
+
+/*----Estilos de bienvenida y experiencia----*/
+
+.welcome, .experience {
+	margin-bottom: 20px;
+}
+
+.welcome__container, .experience__container {
+	margin:5px;
+}
+
+.welcome__title, .experience__title {
+	text-align: center;
+	color: brown;
+}
+
+.welcome-p {
+	margin-top:12px;
+	text-align: center;
+}
+
+.welcome__link {
+	text-decoration: none;
+	border-radius: 4px;
+	background: none;
+	color: brown;
+	padding: 10px;
+	font-size: 14px;
+	box-shadow: 6px 6px 17px #000;
+}
+
+.welcome-edit, .experience-edit, .personal-delete,
+.personal-add, .coffee-delete, .coffee-add,
+.cakes-delete, .cakes-add, .gallery-edit, .services-delete,
+.services-add, .contact_us-edit, .about-delete,
+.about-add {
+	border:2px solid brown;
+	padding: 8px;
+	background: none;
+	color: brown;
+	font-size: 16px;
+	margin-top:20px;
+	cursor: pointer;
+}
+
+.form-welcome-container, .form-banner-container,
+.form-experience-container, .form-personal-container,
+.form-coffee-container, .form-cakes-container,
+.form-services-container, .form-contact_us-container,
+.form-about-container {
+	display: none;
+}
+
+.form-welcome-container:target, .form-banner-container:target,
+.form-experience-container:target, .form-personal-container:target,
+.form-coffee-container:target, .form-cakes-container:target,
+.form-services-container:target, .form-contact_us-container:target,
+.form-about-container:target {
+	position: fixed;
+	display: block;
+	z-index: 2;
+	transition: all 0.3s;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.8);
+}
+
+.form-welcome, .form-banner,
+.form-experience, .form-personal,
+.form-coffee, .form-cakes,
+.form-services, .form-contact_us,
+.form-about {
+	margin: auto;
+	width: 80%;
+	background: #eee;
+	border:2px solid navy;
+	border-radius: 5px;
+	padding: 22px;
+	box-sizing: border-box;
+}
+
+.cerrar-center {
+	width: 95%;
+	margin: auto;
+	overflow: hidden;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.cerrar {
+	width: 25px;
+	height: 25px;
+	background: brown;
+	color: #fff;
+	padding: 5px;
+	border-radius: 50%;
+	line-height: 25px;
+	text-decoration: none;
+	text-align: center;
+	float: right;
+}
+
+.cerrar:hover {
+	background: rgb(190,47,47);
+}
+
+.form-welcome label, .form-banner label,
+.form-experience label, .form-personal label,
+.form-coffee label, .form-cakes label,
+.form-services label, .form-contact_us label,
+.form-about label {
+	font-size: 15px;
+}
+
+.form-welcome input, .form-banner input,
+.form-experience input, .form-personal input,
+.form-coffee input, .form-cakes input,
+.form-services input, .form-contact_us input,
+.form-about input {
+	width: 100%;
+	height: 30px;
+}
+
+.form-welcome textarea, .form-banner textarea,
+.form-experience textarea, .form-personal textarea,
+.form-coffee textarea, .form-cakes textarea,
+.form-services textarea, .form-contact_us textarea,
+.form-about textarea {
+	width: 100%;
+	min-width: 100%;
+	max-width: 100%;
+	height: 100px;
+	min-height: 60px;
+	max-height: 140px;
+}
+
+.errors {
+	color: red;
+	font-size: 14px;
+	text-align: center;
+}
+
+/*-------------Nuestro personal-------------*/
+
+.our-personal {
+	margin-bottom: 20px;
+}
+
+.our-personal-title {
+	text-align: center;
+	color: brown;
+	margin-bottom: 20px;
+}
+
+.chefs {
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.chefs-img {
+	width: 70%;
+	margin: auto;
+	border-radius: 50%;
+}
+
+.chefs__content {
+	margin-top: 10px;
+}
+
+.chefs-name {
+	font-size: 18px;
+	color: brown;
+}
+
+/*---------- Boton borrar -----------*/
+
+.personal-delete-container, .coffee-delete-container,
+.cakes-delete-container, .services-delete-container,
+.about-delete-container {
+	display: none;
+}
+
+.personal-delete-container:target, .coffee-delete-container:target,
+.cakes-delete-container:target, .services-delete-container:target,
+.about-delete-container:target {
+	display: block;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: rgba(0,0,0,.8);
+}
+
+.personal-delete-content, .coffee-delete-content,
+.cakes-delete-content, .services-delete-content,
+.about-delete-content {
+	width: 85%;
+	margin: 20px auto;
+	color: #444;
+	border:1px solid #444;
+	border-radius: 10px;
+	background: #eee;
+	padding: 20px;
+	box-sizing: border-box;
+}
+
+.personal-delete-title, .coffee-delete-title,
+.cakes-delete-title, .services-delete-title,
+.about-delete-title {
+	text-align: center;
+	font-size: 15px;
+}
+
+.personal-delete-buttons, .coffee-delete-buttons,
+.cakes-delete-buttons, .services-delete-buttons,
+.about-delete-buttons {
+	display: flex;
+	justify-content: space-around;
+	margin-top: 20px;
+}
+
+.personal-delete-accept, .coffee-delete-accept,
+.cakes-delete-accept, .services-delete-accept,
+.about-delete-accept {
+	padding: 6px;
+	font-size: 14px;
+	text-decoration: none;
+	border:1px solid rgb(0,100,0);
+	border-radius: 5px;
+	background: rgb(0,125,0);
+	color: #fff;
+}
+
+.personal-delete-accept:hover, .coffee-delete-accept:hover,
+.cakes-delete-accept:hover, .services-delete-accept:hover,
+.about-delete-accept:hover {
+	background: rgb(0,135,0);
+}
+
+.personal-delete-cancel, .coffee-delete-cancel,
+.cakes-delete-cancel, .services-delete-cancel,
+.about-delete-cancel {
+	padding: 6px;
+	font-size: 14px;
+	text-decoration: none;
+	border:1px solid rgb(100,0,0);
+	border-radius: 5px;
+	background: rgb(195,0,0);
+	color: #fff;
+}
+
+.personal-delete-cancel:hover, .coffee-delete-cancel:hover,
+.cakes-delete-cancel:hover, .services-delete-cancel:hover,
+.about-delete-cancel:hover {
+	background: rgb(210,0,0);
+}
+
+/*-------------Nuestros cafés-------------*/
+
+.column__coffee-container {
+	margin-bottom: 20px;
+}
+
+.column__coffee-content {
+	margin:0 4px 0 4px;
+}
+
+.column__coffee {
+	margin-bottom: 20px;
+	border:5px solid #ccc;
+	border-radius: 5px;
+}
+
+.column__coffee-img {
+	height: 170px;
+	object-fit: cover;
+}
+
+
+.column__coffee-container-title {
+	text-align: center;
+	color: brown;
+	margin-bottom: 15px;
+}
+
+.column__coffee-text {
+	text-align: center;
+	padding: 10px;
+}
+
+.column__coffee-title {
+	font-size: 18px;
+	color: brown;
+}
+
+/*-------------Nuestros postres-------------*/
+
+.column__container {
+	margin-bottom: 20px;
+}
+
+.column__content {
+	margin:0 4px 0 4px;
+}
+
+.column {
+	margin-bottom: 20px;
+	border:5px solid #ccc;
+	border-radius: 5px;
+}
+
+.column__img {
+	height: 170px;
+	object-fit: cover;
+}
+
+.column__container-title {
+	text-align: center;
+	color: brown;
+	margin-bottom: 15px;
+}
+
+.column__text {
+	text-align: center;
+	padding: 10px;
+}
+
+.column__title {
+	font-size: 18px;
+	color: brown;
+}
+
+/*-------------Gallery-------------*/
+
+.gallery-title {
+	text-align: center;
+	color: brown;
+	letter-spacing: 3px;
+	width: 130px;
+	margin: auto;
+	border-bottom: 4px solid brown;
+	margin-bottom: 15px;
+}
+
+.gallery {
+	display: flex;
+	list-style: none;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+
+.gallery__img {
+	width: 230px;
+	height: 170px;
+	margin:5px;
+	object-fit: cover;
+	transition: all 0.5s;
+}
+
+.gallery__img:hover {
+	transform: scale(1.02);
+}
+
+/*---------- Gallery modal ------------*/
+
+.gallery__modal {
+	display: none;
+}
+
+.gallery__modal:target {
+	display: block;
+	position: fixed;
+	background: rgba(0,0,0,.8);
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index: 10;
+}
+
+.gallery__modal--overflow {
+	overflow: hidden;
+}
+
+.gallery__modal-close {
+	font-size: 20px;
+	text-decoration: none;
+	background: #fff;
+	color: #000;
+	margin: 5px;
+	padding: 5px;
+	border-radius: 50%;
+	width: 25px;
+	height: 25px;
+	line-height: 25px;
+	text-align: center;
+	float: right;
+}
+
+.gallery__modal-title {
+	text-align: center;
+	color: #fff;
+	margin-bottom: 5px;
+}
+
+.gallery__modal-content {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.gallery__modal-content a {
+	font-size: 40px;
+	color: #fff;
+	text-decoration: none;
+	background: #fff;
+	color: #000;
+	margin:7px;
+	padding: 8px;
+	border-radius: 50%;
+	width: 25px;
+	height: 25px;
+	line-height: 25px;
+	text-align: center;
+}
+
+
+.gallery__modal-content a:nth-child(2) {
+	margin: 0;
+	height: 100%;
+	flex-shrink: 2;
+}
+
+.gallery__modal-img {
+	width: 500px;
+	height: 100%;
+	object-fit: cover;
+	border:7px solid #fff;
+	box-sizing: border-box;
+}
+
+/*------------- Gallery - Paginación -----------*/
+
+	   #active > .pag-link{
+	   	background: rgb(255,116,0); 
+	   }
+	  .paginacion {
+	  	margin: 15px auto;
+	  	text-align: center;
+	  }
+
+      ul > .li{
+      	list-style: none;
+      	display: inline-block;
+      	margin-right:7px;
+      }
+      ul > .li > .pag-link {
+      	color: #FFFFFF;
+      	text-decoration: none;
+      	padding: 10px 17px 10px 17px;
+        display: block;
+		background: brown; /* Old browsers */
+		border-radius: 50%;
+
+      }
+      .btn > .pag-link {
+      	padding: ;
+		background: brown; /* Old browsers */
+	    border-radius: ;
+		text-align: center;
+		width:;
+      }
+
+/*-------------Nuestros servicios-------------*/
+
+.service__column {
+	width: 70%;
+	margin: auto;
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.service__column-img {
+	border-radius: 50%;
+	margin-bottom: 15px;
+}
+
+.service__column-title {
+	font-size: 22px;
+	color: brown;
+	margin-bottom: 5px;
+}
+
+/*-------------Info de contacto-------------*/
+
+.contact-us-title, .service-title, .about-title {
+	font-size: 24px;
+	margin-bottom: 30px;
+	text-align: center;
+	color: brown;
+	letter-spacing: 4px;
+}
+
+.contact-us {
+	margin-bottom: 20px;
+}
+
+.contact-info {
+	width: 90%;
+	margin: auto;
+	margin-bottom: 20px;
+	border-bottom: 1px solid brown;
+	padding-bottom: 20px;
+}
+
+.contact-info-title {
+	text-align: center;
+}
+
+.contact-info-title, .contact-info-txt {
+	margin-bottom: 15px;
+}
+
+/*-------------Formulario contacto-------------*/
+
+.contact-form-container-title {
+	text-align: center;
+	margin-bottom: 15px;
+	color: brown;
+}
+
+.contact-form {
+	width: 90%;
+	margin: auto;
+}
+
+.contact-form input {
+	width: 100%;
+	height: 40px;
+}
+
+.contact-form input[type='text'], textarea {
+	margin-bottom: 10px;
+	font-size: 14px;
+}
+
+.contact-form textarea {
+	width: 100%;
+	max-width: 100%;
+	min-width: 100%;
+	height: 100px;
+	max-height: 140px;
+	min-height: 60px;
+}
+
+/*-----------------Acerca de----------------*/
+
+.about__column {
+	width: 70%;
+	margin: auto;
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.about__column-img {
+	border-radius: 50%;
+	margin-bottom: 15px;
+}
+
+.about__column-name {
+	font-size: 22px;
+	color: brown;
+	margin-bottom: 5px;
+}
+
+/*-----------------Button up----------------*/
+
+.button-up-container {
+	overflow: hidden;
+	margin-bottom: 20px;
+}
+
+.button-up {
+	border:1px solid brown;
+	border-radius: 50%;
+	padding: 10px;
+	width: 20px;
+	text-align: center;
+	color: brown;
+	text-decoration: none;
+	float: right;
+}
+
+/*-----------------Footer----------------*/
+
+.main-footer {
+    background: #222;
+    color: white;
+    padding: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: .8em;
+}
+.footer__column {
+	margin-bottom: 20px;
+}
+.footer__column-title {
+	margin-bottom: 10px;
+}
+.copy {
+    text-align: center;
+    margin:auto;
+    margin-top: 15px;
+}
+
+.main-footer [class*="icon-"] {
+    color: white;
+    text-decoration: none;
+}
+
+.main-footer [class*="icon-"]:before {
+    position: relative;
+    top: 3px;
+    right: 5px;
+}
+
+.footer-edit {
+	border:2px solid #fff;
+	padding: 8px;
+	background: none;
+	color: #fff;
+	font-size: 16px;
+	margin-top:20px;
+	cursor: pointer; 
+}
+
+/*---------- Footer - Formulario -----------*/
+
+.form-footer-container {
+	display: none;
+}
+
+.form-footer-container:target {
+	position: fixed;
+	display: block;
+	z-index: 2;
+	transition: all 0.3s;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.8);
+}
+
+.cerrar-center-footer {
+	width: 95%;
+	margin: auto;
+	overflow: hidden;
+	margin-top: 10px;
+}
+
+.cerrar-footer {
+	width: 25px;
+	height: 25px;
+	background: brown;
+	color: #fff;
+	padding: 5px;
+	border-radius: 50%;
+	line-height: 25px;
+	text-decoration: none;
+	text-align: center;
+	float: right;
+}
+
+.cerrar-footer:hover {
+	background: rgb(190,47,47);
+}
+
+.form-footer--flex {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin-bottom: 5px;
+}
+
+.form-footer-description, .form-footer-contact,
+.form-footer-social__networks {
+	width: 45%;
+}
+
+.form-footer {
+	margin: auto;
+	width: 95%;
+	background: #eee;
+	border:2px solid navy;
+	border-radius: 5px;
+	padding: 22px;
+	box-sizing: border-box;
+}
+
+.form-footer label {
+	font-size: 12px;
+}
+
+.form-footer input {
+	width: 100%;
+	height: 25px;
+}
+
+.form-footer textarea {
+	width: 100%;
+	min-width: 100%;
+	max-width: 100%;
+	height: 110px;
+	min-height: 70px;
+	max-height: 150px;
+}
+
+@media screen and (min-width: 480px) {
+/*----------c_panel---------------*/
+   .c_panel-title {
+	font-size: 18px;
+    }
+    .c_panel-close {
+    	height: 35px;
+    }
+/*--------------------------------*/
+	.welcome, .experience {
+		display: flex;
+		justify-content: space-around;
+	}
+	.welcome__img, .experience__img {
+		object-fit: cover;
+	}
+	.welcome__img, .welcome__container,
+	.experience__img, .experience__container {
+		width: 45%;
+	}
+	.welcome__title, .experience__title {
+		margin-bottom: 12px;
+	}
+	.welcome__txt, .experience__txt {
+		font-size: 14px;
+		text-align: justify;
+	}
+	.welcome {
+		margin-bottom: 60px;
+	}
+	.experience {
+		margin-bottom: 30px;
+	}
+	.welcome__img {
+		margin-right: 5px;
+	}
+	.experience__img {
+		margin-left: 5px;
+	}
+	/*Welcome - Form*/
+	.form-welcome, .form-banner,
+    .form-experience, .form-personal,
+    .form-coffee, .form-cakes,
+    .form-services, .form-contact_us,
+    .form-about {
+	    width: 65%;
+    }
+
+	/*---------Nuestro personal-----------*/
+	.chefs-flex {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+	.chefs {
+		width: 33%;
+	}
+	/*Estilos personal - boton borrar*/
+	.personal-delete-content, .coffee-delete-content,
+    .cakes-delete-content, .services-delete-content,
+    .about-delete-content {
+	    width: 70%;
+    }
+    .personal-delete-title, .coffee-delete-title,
+    .cakes-delete-title, .services-delete-title,
+    .about-delete-title {
+	    font-size: 17px;
+    }
+    .personal-delete-accept, .coffee-delete-accept,
+    .cakes-delete-accept, .services-delete-accept,
+    .about-delete-accept {
+	    padding: 8px;
+    }
+    .personal-delete-cancel, .coffee-delete-cancel,
+    .cakes-delete-cancel, .services-delete-cancel,
+    .about-delete-cancel {
+	    padding: 8px;
+    }
+	/*---------Our coffee-----------*/
+	.column__coffee-content {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+	.column__coffee {
+		width: 23%;
+		border: 3px solid #ccc;
+	}
+	/*---------Nuestros postres-----------*/
+	.column__content {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+	.column {
+		width: 23%;
+		border: 3px solid #ccc;
+	}
+/*-------------Gallery-------------*/
+    .gallery__modal-img {
+	    width: 500px;
+	    height: 250px;
+	    object-fit: cover;
+	    border:7px solid #fff;
+	    box-sizing: border-box;
+}
+/*-------------Nuestros servicios-------------*/
+    .service__container {
+    	display: flex;
+    	flex-wrap: wrap;
+    	justify-content:space-between;
+    }
+    .service__column {
+    	width: 26%;
+    	margin-top: 0;
+    }
+    .service__column-img {
+    	width: 80%;
+    	margin: auto;
+    	margin-bottom: 15px;
+    }
+	/*---------Info contacto-----------*/
+	.contact-us {
+		display: flex;
+		justify-content: space-between;
+		margin: auto;
+		margin-bottom: 20px;
+	}
+	.contact-info {
+		width: 100%;
+		margin: 0;
+		border-right: 1px solid brown;
+		border-bottom: 0;
+		padding: 0;
+		padding-right: 10px;
+	}
+	.contact-form-container {
+		width: 100%;
+		overflow: hidden;
+	}
+	.contact-form {
+		width: 100%;
+		padding-left: 10px;
+	}
+	/*---------Acerca de-----------*/
+	.about {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+	.about__column {
+		width: 27%;
+		margin-top: 0;
+	}
+	.about__column-name {
+		font-size: 18px;
+	}
+	/*---------Footer-----------*/
+	.footer__column {
+		display: inline-block;
+		width: 32%;
+		vertical-align: top;
+	}
+	.footer__column-title {
+		font-size: 16px;
+	}
+	.footer__column-txt {
+		font-size: 13px;
+	}
+	.copy {
+		font-size: 13px;
+	}
+	/*Footer - form*/
+	.form-footer {
+		width: 80%;
+	}
+    .form-footer input {
+	    height: 30px;
+    }
+
+}
+
+@media screen and (min-width: 768px) {
+/*----------c_panel---------------*/
+    .c_panel-close {
+    	height: 22px;
+    }
+/*----------banner---------------*/
+	.banner__content {
+		width: 65%;
+	}
+	.banner__title {
+		font-size: 18px;
+	}
+	/*-------Bienvenida, experiencia------*/
+	.welcome__title, .experience__title {
+		font-size: 22px;
+	}
+	.experience {
+	margin-bottom: 60px;
+    }
+	/*Welcome - Form*/
+	.form-welcome, .form-banner,
+    .form-experience, .form-personal,
+    .form-coffee, .form-cakes,
+    .form-services, .form-contact_us,
+    .form-about {
+	    width: 50%;
+    }
+	/*-----------Personal-----------*/
+	.our-personal {
+    	background-image: url(../img/our-personal-background.jpg);
+	    background-size: 100% 100%;
+	    background-attachment: fixed;
+	}
+	.our-personal-color {
+		background: rgba(0,0,0,.2);
+		padding: 40px 0 40px 0;
+	}
+	.our-personal-title {
+		color: #fff;
+		font-size: 22px;
+	}
+	.chefs-img {
+		border:2px solid #fff;
+	}
+	.chefs-name {
+		font-weight: bold;
+		color: #fff;
+	}
+	.chefs-age {
+		color: #fff;
+	}
+	/*Estilos personal - boton borrar*/
+	.personal-delete {
+		color: #fff;
+		border:2px solid #fff;
+	}
+	.personal-delete-content, .coffee-delete-content,
+    .cakes-delete-content, .services-delete-content,
+    .about-delete-content {
+	    width: 50%;
+    }
+    .personal-delete-title, .coffee-delete-title,
+    .cakes-delete-title, .services-delete-title,
+    .about-delete-title {
+	    font-size: 18px;
+    }
+    .personal-delete-accept, .coffee-delete-accept,
+    .cakes-delete-accept, .services-delete-accept,
+    .about-delete-accept {
+	    padding: 10px;
+    }
+    .personal-delete-cancel, .coffee-delete-cancel,
+    .cakes-delete-cancel, .services-delete-cancel,
+    .about-delete-cancel {
+	    padding: 10px;
+    }
+	/*-------Our coffee------*/
+	.column__coffee-container-title {
+		font-size: 22px;
+	}
+	/*Estilos personal - boton agregar*/
+	.personal-add {
+		color: #fff;
+		border:2px solid #fff;
+	}
+	/*-------Nuestros postres------*/
+	.column__container-title {
+		font-size: 22px;
+	}
+/*-------------Nuestros servicios-------------*/
+    .service__column {
+    	width: 24%;
+    }
+/*-------------Acerca de-------------*/
+    .about__column {
+    	width: 23%;
+    }
+/*-------------Footer-------------*/
+	.form-footer {
+		width: 70%;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.container {
+		width: 1000px;
+		margin: auto;
+	}
+	.header {
+		display: none;
+	}
+	.line-hr {
+		margin-bottom: 20px;
+	}
+	/*----------c_panel---------------*/
+   .c_panel {
+   	margin: 10px 0 20px 0;
+   }
+   .c_panel-title {
+	font-size: 22px;
+    }
+	/*----------------Menu-------------------*/
+	.logo {
+		display: block;
+		z-index: 1;
+		color: #fff;
+		font-family: 'Pacifico';
+	}
+	.icon-bars {
+		display: none;
+	}
+	.div-color {
+		display: flex;
+		justify-content: space-between;
+		overflow: hidden;
+		margin-top: 10px;
+	}
+	.menu {
+		z-index: 1;
+		position: relative;
+		width: 48%;
+		font-size: 14px;
+		left: 0;
+		display: flex;
+		float: right;
+	}
+	.menu__link {
+		color: rgb(240,240,240);
+		background: 0;
+	}
+	.menu__link:hover {
+		color: #fff;
+		background: 0;
+	}
+	/*------------banner-------------*/
+	.banner {
+		margin-top: -70px;
+		margin-bottom: 20px;
+		background-image: none;
+		animation: banner 10s infinite;
+		animation-direction: alternate;
+	}
+	@keyframes banner {
+	    0%, 30% {
+		    background-image: url(../img/banner1.jpg);
+		    opacity: 1;
+	    }
+	    31%, 34% {
+		    opacity: 0.8;
+	    }
+	    35%, 65% {
+		    background-image: url(../img/banner2.jpg);
+		    opacity: 1;
+	    }
+	    66%, 69% {
+		    opacity: 0.8;
+	    }
+	    70%, 100% {
+		    background-image: url(../img/banner3.png);
+		    opacity: 1;
+	    }
+    }
+	.banner__title {
+		font-size: 30px;
+	}
+	.banner__txt {
+		font-size: 20px;
+	}
+	.banner__buttons-link {
+		font-size: 18px;
+	}
+	/*---------Welcome, Experience---------*/
+	.welcome, .experience {
+		margin-bottom: 20px;
+	}
+	/*Welcome - Form*/
+	.form-welcome, .form-banner,
+    .form-experience, .form-personal,
+    .form-coffee, .form-cakes,
+    .form-services, .form-contact_us,
+    .form-about {
+	    width: 40%;
+    }
+	/*---------Coffee---------*/
+	.column__coffee-container {
+		margin-bottom: 20px;
+	}
+	/*---------Nuestro personal---------*/
+	.our-personal {
+		margin-bottom: 20px;
+	}
+	.chefs-img {
+		width: 50%;
+	}
+	/*---------Nuestros servicios---------*/
+    .service__column {
+    	width: 26%;
+    }
+	/*--------Contacto----------*/
+	.contact-us-title {
+		margin-bottom: 50px;
+	}
+	/*-------------Acerca de-------------*/
+    .about__column {
+    	width: 26%;
+    }
+    /*-------------Button up-------------*/
+    .button-up-container {
+    	margin-bottom: 20px;
+    }
+}
+
+@media screen and (min-width: 1600px) {
+	.container {
+		width: 1300px;
+	}
+    .banner__color {
+	   padding: 220px 0 220px 0;
+    }
+}

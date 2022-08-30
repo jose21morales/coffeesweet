@@ -1,0 +1,115 @@
+@font-face {
+	font-family: 'Pacifico';
+	src:url(../fonts/Pacifico-Regular.ttf);
+}
+
+@font-face {
+	font-family: 'Montserrat';
+	src:url(../fonts/Montserrat-Regular.ttf);
+}
+
+@font-face {
+	font-family: 'Montserrat';
+	font-weight: bold;
+	src:url(../fonts/Montserrat-Bold.ttf);
+}
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	font-family: 'Montserrat';
+}
+.form-title {
+	text-align: center;
+	color: brown;
+	margin-bottom: 5px;
+}
+.form {
+	width: 250px;
+	margin: auto;
+	border:1px solid #ccc;
+	border-radius: 10px;
+	padding: 10px;
+	margin-top: 30px;
+}
+table {
+	margin: auto;
+}
+form input {
+	width: 200px;
+	height: 30px;
+	margin-bottom: 5px;
+	border:1px solid #ccc;
+	border-radius: 5px;
+}
+.icon-user, .icon-lock {
+	color: brown;
+	font-size: 20px;
+}
+.error {
+	text-align: center;
+	font-size: 16px;
+	color:red;
+}
+form input[type='submit'] {
+	width: 100%;
+}
+form input[type='submit']:hover {
+	cursor: pointer;
+	background: rgb(230,230,230);
+}
+
+.password_forget {
+	border:none;
+	background: none;
+	text-decoration: underline;
+	color: blue;
+	margin: auto;
+}
+
+.password_forget:hover {
+	cursor: pointer;
+}
+
+.back-container {
+	width: 270px;
+	margin: auto;
+	margin-top: 20px;
+}
+
+.back {
+	border:3px solid brown;
+	border-radius: 5px;
+	padding: 7px;
+	color:brown;
+	font-size: 16px;
+	text-decoration: none;
+}
+
+@media screen and (min-width: 1024px) {
+	.form-title {
+	    margin-bottom: 10px;
+    }
+	.form {
+		width: 350px;
+		padding: 15px;
+	}
+	form input  {
+		font-size: 16px;
+	    width: 300px;
+	    height: 35px;
+	    padding-left:5px; 
+    }
+    .icon-user, .icon-lock {
+	    font-size: 24px;
+    }
+    .password_forget {
+	    font-size: 15px;
+    }
+    .back-container {
+	    width: 380px;
+	    margin: auto;
+	    margin-top: 20px;
+    }
+}
